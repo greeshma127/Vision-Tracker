@@ -1,0 +1,31 @@
+<%- include("partials/header.ejs"); -%>
+
+<h2>Delete A Record</h2>
+
+<form action="/delete" method="post">
+    <table>
+      <tr>
+        <th></th>
+        <th>Id</th>
+        <th>Right Sph</th>
+        <th>Right Cyl</th>
+        <th>Left Sph</th>
+        <th>Left Cyl</th>
+        <th>Remarks</th>
+        <th>Date</th>
+      </tr>
+      <% details.forEach((detail) => { %> 
+        <tr>
+          <td><input type="radio" name="id" value="<%= detail.id %>"></td>
+          <td><%= detail.id %></td>
+          <td><%= detail.r_sph %></td>
+          <td><%= detail.r_cyl %></td>
+          <td><%= detail.l_sph %></td>
+          <td><%= detail.l_cyl %></td>
+          <td><%= detail.remarks %></td>
+          <td><%= detail.date %></td>
+        </tr>
+      <% }) %>
+    </table>
+    <button id="btn1">Delete</button>
+  </form>

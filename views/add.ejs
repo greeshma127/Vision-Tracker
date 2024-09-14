@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs"); -%>
+
+<div class="add">
+    <h2>Add New Powers</h2>
+
+<form action="/add" method="post">
+    <label>Right Sph</label>
+    <input type="text" name="r_sph"><br><br>
+    <label>Right Cyl</label>
+    <input type="text" name="r_cyl"><br><br>
+    <label>Left Sph</label>
+    <input type="text" name="l_sph"><br><br>
+    <label>Left Cyl</label>
+    <input type="text" name="l_cyl"><br><br>
+    <label>Remarks</label>
+    <textarea name="remarks" cols="30" rows="10"></textarea><br><br>
+    <label>Date</label>
+    <input type="text" name="date"><br><br>
+    <button id="btn1">Submit</button>
+</form>
+</div>
